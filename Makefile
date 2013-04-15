@@ -1,6 +1,3 @@
-HOME := /home/alexey/
-
-
 .PHONY : deploy
 deploy:
 	-git add .
