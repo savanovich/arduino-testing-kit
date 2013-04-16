@@ -16,9 +16,7 @@ const byte Y4_PIN = 17;
 SegmentsDisplay display;
 
 
-const unsigned int BOUND_RATE = 9600;
 void setup() {
-    Serial.begin(BOUND_RATE);
     display.setup(
             A_PIN, B_PIN, C_PIN, D_PIN, E_PIN, F_PIN, G_PIN,
             DP_PIN,
@@ -26,19 +24,14 @@ void setup() {
 }
 
 void loop() {
-    display.show(1);
-    display.show(23);
-    display.show(456);
-    display.show(7890);
-    display.show(7);
-    display.show(89);
-    /* display.show(012); */
-    display.show(3456);
+    display.show(0.123);
+    display.show(4.567);
+    display.show(89.01);
+    display.show(234.5);
+    display.show(6789.1);
 
-    /* for(int i=0; i < 1000; i++) { */
-    /*     display.show(i); */
-    /*     delay(1000); */
-    /*     /1* display.showPoint(); *1/ */
-    /* } */
+    display.show(0.001);
+    display.show(6789.123);
+    display.show(678912.3); // too big
 }
 
