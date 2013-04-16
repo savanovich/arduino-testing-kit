@@ -1,4 +1,4 @@
 .PHONY : deploy
 deploy:
 	-git add .
-	-git commit -am "Updated" && git push && git push origin master
+	-git commit -am "Updated" && git push && git push origin master && git push bitucket master
