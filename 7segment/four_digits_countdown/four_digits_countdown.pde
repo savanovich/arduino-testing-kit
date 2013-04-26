@@ -13,7 +13,7 @@ const byte Y2_PIN = 15;
 const byte Y3_PIN = 16;
 const byte Y4_PIN = 17;
 
-SegmentsDisplay display;
+FourDigitsDisplay display;
 
 void setup() {
     display.setup(
@@ -23,7 +23,7 @@ void setup() {
 }
 
 void loop() {
-    for(int i=0; i < 1000; i++) {
+    for(int i = -5; i < 1000; i++) {
         display.show(i);
     }
 }

@@ -7,7 +7,7 @@ const unsigned int D_PIN = 5;
 const unsigned int E_PIN = 6;
 const unsigned int F_PIN = 7;
 const unsigned int G_PIN = 8;
-const unsigned int DP_PIN = 13;
+const unsigned int DP_PIN = 12;
 
 OneDigitDisplay display;
 
@@ -16,9 +16,11 @@ void setup() {
 }
 
 void loop() {
-    for(int i=-3; i < 13; i++) {
-        display.show(i);
-        display.clean();
-    }
+    display.show(12.34, 2);
+    display.clean();
+    display.show(1.34, 4);
+    display.clean();
+    display.show(0.00, 2);
+    display.clean();
 }
 
