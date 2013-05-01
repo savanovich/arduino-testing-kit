@@ -7,7 +7,8 @@ const byte D_PIN = 5;
 const byte E_PIN = 6;
 const byte F_PIN = 7;
 const byte G_PIN = 8;
-const byte DP_PIN = 13;
+const byte DP_PIN = 12;
+
 const byte Y1_PIN = 14;
 const byte Y2_PIN = 15;
 const byte Y3_PIN = 16;
@@ -23,8 +24,9 @@ void setup() {
 }
 
 void loop() {
-    for(int i = -5; i < 1000; i++) {
-        display.show(i);
+    for(int i = 0; i < 1000; i+=50) {
+        display.showInt(i);
+        display.clean();
     }
 }
 

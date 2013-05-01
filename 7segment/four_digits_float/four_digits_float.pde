@@ -7,13 +7,14 @@ const byte D_PIN = 5;
 const byte E_PIN = 6;
 const byte F_PIN = 7;
 const byte G_PIN = 8;
-const byte DP_PIN = 13;
+const byte DP_PIN = 12;
+
 const byte Y1_PIN = 14;
 const byte Y2_PIN = 15;
 const byte Y3_PIN = 16;
 const byte Y4_PIN = 17;
 
-SegmentsDisplay display;
+FourDigitsDisplay display;
 
 
 void setup() {
@@ -24,14 +25,22 @@ void setup() {
 }
 
 void loop() {
-    display.show(0.123);
-    display.show(4.567);
-    display.show(89.01);
-    display.show(234.5);
-    display.show(6789.1);
+    display.showDouble(0.123, 3);
+    display.clean();
 
-    display.show(0.001);
-    display.show(6789.123);
-    display.show(678912.3); // too big
+    display.showDouble(456.7, 1);
+    display.clean();
+
+    display.showFloat(6789.1, 1);
+    display.clean();
+
+    display.showFloat(0.001, 3);
+    display.clean();
+
+    display.showFloat(6789.123, 3);
+    display.clean();
+
+    display.showFloat(678912.3, 1);
+    display.clean();
 }
 

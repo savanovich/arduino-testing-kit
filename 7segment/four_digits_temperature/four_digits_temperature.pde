@@ -7,17 +7,17 @@ const byte D_PIN = 5;
 const byte E_PIN = 6;
 const byte F_PIN = 7;
 const byte G_PIN = 8;
-const byte DP_PIN = 13;
+const byte DP_PIN = 12;
+
 const byte Y1_PIN = 14;
 const byte Y2_PIN = 15;
 const byte Y3_PIN = 16;
 const byte Y4_PIN = 17;
 
-SegmentsDisplay display;
+FourDigitsDisplay display;
 
-const byte TEMP_SENSOR_PIN = 19;
+const byte TEMP_SENSOR_PIN = A5;
 const float SUPPLY_VOLTAGE = 5.0;
-const unsigned int DELAY = 1000;
 
 void setup() {
     display.setup(
@@ -32,6 +32,8 @@ const float get_temperature() {
 }
 
 void loop() {
-    display.show(get_temperature());
+    String temp = display.doubleToString((double) get_temperature(), 1);
+    Serial.println(temp);
+    display.showString(temp + String('C'));
 }
 
