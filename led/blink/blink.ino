@@ -5,7 +5,7 @@
    This example code is in the public domain.
  */
 
-const insigned int LED_PIN = 13;
+const unsigned int LED_PIN = 12;
 
 void setup() {
     pinMode(LED_PIN, OUTPUT);
