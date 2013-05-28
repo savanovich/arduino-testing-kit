@@ -1,0 +1,1 @@
+make -f ../Arduino.mk && make -f ../Arduino.mk upload && cd ./application.linux64/FirmataScope

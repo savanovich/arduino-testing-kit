@@ -1,4 +1,4 @@
-const unsigned int TEMP_SENSOR_PIN = 0;
+const unsigned int TEMP_SENSOR_PIN = A0;
 const float SUPPLY_VOLTAGE = 5.0;
 const unsigned int BAUD_RATE = 9600;
 const unsigned int DELAY = 1000;
