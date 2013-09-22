@@ -12,7 +12,8 @@ void setup() {
 }
 
 void loop() {
-    display.showString("PLAY");
+    display.showInt(8);
+    /* display.showString("PLAY"); */
     /* display.showString("STOP"); */
 
     /* display.showDouble(1.2345, 4); */
